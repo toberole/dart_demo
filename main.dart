@@ -22,6 +22,13 @@ void main(List<String> args){
   // list
   var list = [11,22,33,44,55];
   list.add(6);
+  
+  print("-------------------------------------------\n");
+  for (var item in list) {
+    print("$item\n");
+  }
+  print("-------------------------------------------\n");
+
   list.remove(11);
   for (var item in list) {
     print("$item\n");
