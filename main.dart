@@ -34,6 +34,101 @@ void main(List<String> args){
     print("$item\n");
   }
 
+  // map
+  var map = new Map<String,int>();
+  map["h"] = 22;
+  map["j"] = 33;
 
+ var entries = map.entries;
+
+ for (var item in entries) {
+   print("key = "+item.key);
+   print("value = "+item.value.toString());
+ }
+
+ var map1 = {"h":"gg","j":"kk"};
+
+  print("命名参数");
+
+  func_test(s1: "hello",s2: "world");
+
+  func_test1(s1: "给命名参数一个默认值");
+
+  func_test2();
 
 }
+
+// 命名参数
+// dart命名参数 当调用函数的时候，必须指定参数的名字。
+// 要使用命名参数，可以将函数的参数包括在花括号{}内。
+func_test({String s1,String s2}){
+  print("s1 = $s1,s2 = $s2");
+}
+
+// 给命名参数一个默认值
+func_test1({String s1,String s2 = "kkkkk"}){
+  print("s1 = $s1,s2 = $s2");
+}
+
+// 匿名函数
+func_test2(){
+  // 函数
+  var func = (){
+    print("hello test2");
+  };
+
+  func();
+}
+
+// 异常处理
+func_test3(int a,int b){
+  try {
+    double i = a/b;
+  } on IntegerDivisionByZeroException{
+
+  }catch (e) {
+    print(e.toString());
+  }finally{
+    print("=== finally ===");
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
