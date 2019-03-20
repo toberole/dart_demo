@@ -9,7 +9,6 @@ main(List<String> args) {
 }
 
 Future<String> func_async_test(){
-  // 类似于线程
   return new Future((){
      //Do a long running task. E.g. Network Call.
       return "net call";

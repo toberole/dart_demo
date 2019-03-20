@@ -1,6 +1,13 @@
 void main(List<String> args){
 	print("hello world");
 
+
+  var testAA;
+  print(testAA ?? "testAA is null");
+  var testBB;
+  print(testAA ??= "testBB is BB");
+  print(testBB);
+
   var name = "hellokit";
 
   if (!name.isEmpty) {
