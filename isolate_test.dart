@@ -13,6 +13,10 @@ void main() {
   //创建ioslate 并且把main这个的sendPort传给了它
   Future<Isolate> isolate = Isolate.spawn(entryPoint, receiverPort.sendPort);
   // isolate.setErrorsFatal(errorsAreFatal)
+  isolate.then((v){
+    // 获取到创建的isolate
+    print("v.runtimeType: "+v.runtimeType.toString());
+  });
   
   // 读取对方发送过来的消息
   // 方式一：注册监听 有消息到来的时 会回调到此

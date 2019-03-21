@@ -1,5 +1,6 @@
 ### Dart
-    Dart是单线程模型，通过消息循环来执行任务[类似node.js]
+    Dart是单线程模型，通过消息循环来执行任务[类似node.js],没有了所谓的主线程/子线程之分。
+    Dart也是Event-Looper以及Event-Queue的模型，所有的事件都是通过EventLooper的依次执行。
 
 dart中所有的东西都是对象。
 
