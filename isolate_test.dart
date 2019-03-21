@@ -11,12 +11,13 @@ void main() {
   //创建一个另外的Isolate
   //创建，第一个参数是 一个Function ，方法，可以传匿名方法，也可以自定义
   //创建ioslate 并且把main这个的sendPort传给了它
-  Isolate.spawn(entryPoint, receiverPort.sendPort);
+  Future<Isolate> isolate = Isolate.spawn(entryPoint, receiverPort.sendPort);
+  // isolate.setErrorsFatal(errorsAreFatal)
   
   // 读取对方发送过来的消息
   // 方式一：注册监听 有消息到来的时 会回调到此
   // 方式二：await for (var msg in receiverPort) 
-  
+
   //dart的一个isolate的运行过程，也是通过事件驱动的，通过事件队列的循环，来响应各种变化。
   // 注册监听 有消息到来的时 会回调到此
   receiverPort.listen((t) {
