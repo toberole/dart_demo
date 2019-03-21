@@ -1,7 +1,48 @@
+import "./domain/Person.dart";
+import 'dart:isolate';
+
+
+// 无类型参数的匿名函数item
+void test(){
+  var list = ["apples","bananas","oranges"];
+
+  list.forEach((item){
+    print("${list.indexOf(item)}:$item\n");
+  });
+}
+
+void test1(){
+  var n = 11;
+  print("the type of n is ${n.runtimeType}");
+}
+
+void test2(){
+  print("=====  test2  =====");
+
+  var emp = new Employee.fromJson({});
+
+  if (emp is Person) {
+    emp.name = "Person Bob";
+  }else{
+    emp.em_name = "Employee Bob";
+  }
+
+  print(emp.toString());
+}
+
+void test3(){
+  
+}
+
 void main(List<String> args){
 	print("hello world");
 
+  // test();
+  // test1();
+  test2();
+}
 
+void test0(){
   var testAA;
   print(testAA ?? "testAA is null");
   var testBB;
@@ -69,7 +110,6 @@ void main(List<String> args){
   func_test1(s1: "给命名参数一个默认值");
 
   func_test2();
-
 }
 
 // 命名参数
