@@ -1,15 +1,15 @@
 ﻿class Person {
-  String name;
+  String? name;
 
-  Person.fromJson(Map data){
+  Person.fromJson(Map data) {
     print("in person");
   }
 }
 
 class Employee extends Person {
-  String em_name;
+  String? em_name;
 
-  Employee.fromJson(Map data):super.fromJson(data){
+  Employee.fromJson(Map data) : super.fromJson(data) {
     print("in Employee");
   }
 
@@ -18,4 +18,3 @@ class Employee extends Person {
     return "P_name ${name}: E_name ${em_name}";
   }
 }
-

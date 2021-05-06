@@ -1,15 +1,15 @@
 ﻿class Demo {
-  String str;
-  int count;
+  String str = "";
+  int count = 0;
 
   // Demo(String str){
   //   this.str = str;
   // }
 
-  Demo(this.str,this.count);
+  Demo(this.str, this.count);
 
   // 命名构造函数
-  Demo.newDemo(String str,int count){
+  Demo.newDemo(String str, int count) {
     this.str = str;
     this.count = count;
   }
@@ -21,15 +21,13 @@ abstract class Anim {
 }
 
 class Dog extends Anim {
-  void eat(){
-      print("hello eat");
+  void eat() {
+    print("hello eat");
   }
 }
 
 // 枚举
-enum Color{
-  red,whilte
-}
+enum Color { red, whilte }
 
 // 泛型
 class DEMO<T> {
