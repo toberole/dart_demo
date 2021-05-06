@@ -1,6 +1,5 @@
 //实现newIsolate与rootIsolate互相通信
 
-import 'dart:io';
 import 'dart:isolate';
 
 //定义一个newIsolate
